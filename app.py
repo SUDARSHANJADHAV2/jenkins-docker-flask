@@ -2,7 +2,6 @@ from flask import Flask
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def home():
     return "TASK 10 SUCCESS: Latest code fetched from GitHub by Jenkins!"
