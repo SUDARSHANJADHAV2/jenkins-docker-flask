@@ -17,7 +17,7 @@ pipeline {
                 echo 'Starting the container...'
                 sh 'docker rm -f my_flask_app || true'
                 
-                sh 'docker run -d -p 5000:5000 --name my_flask_app sudarshansantajijadhav/myapp:latest'
+                sh 'docker run -d -p 5050:5000 --name my_flask_app sudarshansantajijadhav/myapp:latest'
             }
         }
         stage('Verify Container') {
