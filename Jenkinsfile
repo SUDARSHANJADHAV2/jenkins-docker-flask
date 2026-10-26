@@ -6,9 +6,10 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/SUDARSHANJADHAV2/jenkins-docker-flask.git'
             }
         }
-        stage('Display Message') {
+        stage('Build Docker Image') {
             steps {
-                echo 'Successfully cloned the repository. Starting build process...'
+                echo 'Building the Docker image...'
+                sh 'docker build -t sudarshansantajijadhav/myapp:latest .'
             }
         }
     }
